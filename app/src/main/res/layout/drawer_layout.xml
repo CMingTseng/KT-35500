@@ -1,0 +1,57 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <Button
+        android:id="@+id/button_java"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Run Java"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_conversion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tran Kotlin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_modify_kotlin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="modify kotlin"
+        app:layout_constraintEnd_toStartOf="@+id/button_conversion"
+        app:layout_constraintStart_toEndOf="@+id/button_java"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_totp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TOTP_Android_Java"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_java" />
+
+    <Button
+        android:id="@+id/button_totp_pure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TOTP_Java"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_totp" />
+
+    <Button
+        android:id="@+id/button_totp_kotlin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TOTP_Android_kotlin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_totp_pure" />
+</androidx.constraintlayout.widget.ConstraintLayout>

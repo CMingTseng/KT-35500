@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+
+    dependencies {
+        implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta3'
+
+        implementation  group: 'commons-codec', name: 'commons-codec', version: '1.5'
+    }
+
+    defaultConfig {
+        applicationId "com.termux"
+        minSdkVersion 24
+        targetSdkVersion 28
+        versionCode 74
+        versionName "0.74"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.12'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+
+task versionName {
+  doLast {
+    print android.defaultConfig.versionName
+  }
+}
+repositories {
+    mavenCentral()
+}
